@@ -19,8 +19,10 @@ module.exports = {
   },
   validateConvertCurrency : (value) => {
     const convert = value.toUpperCase()
-    const availableCurrencies = ['USD', 'AUD', 'BRL', 'CAD', 'CHF', 'CLP', 'CNY', 'CZK', 'DKK', 'EUR', 'GBP', 'HKD', 'HUF', 'IDR', 'ILS', 'INR', 'JPY', 'KRW', 'MXN', 'MYR', 'NOK', 'NZD', 'PHP', 'PKR', 'PLN', 'RUB', 'SEK', 'SGD', 'THB', 'TRY', 'TWD', 'ZAR', 'BTC']
-    if (availableCurrencies.indexOf(convert) === -1) {
+    if (
+      constants.supportedFiatCurrencies.indexOf(convert) === -1 &&
+      constants.supportedCryptoCurrencies.indexOf(convert) === -1
+    ) {
       console.log('We cannot convert to your currency.'.red)
       process.exit()
     }

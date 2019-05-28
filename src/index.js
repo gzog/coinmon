@@ -30,7 +30,7 @@ console.log('\n')
 
 // handle options
 const convert = program.convert.toUpperCase()
-const marketcapConvert = convert === 'BTC' ? 'USD' : convert
+const marketcapConvert = constants.supportedCryptoCurrencies.indexOf(convert) > -1 ? 'USD' : convert
 const find = program.find
 const portfolio = program.portfolio
 const top = (find.length > 0 || portfolio) ? 1500 : program.top

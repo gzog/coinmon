@@ -10,7 +10,7 @@
 Check cryptocurrencies' prices, changes on your console.
 Best CLI tool for those who are both **Crypto investors** and **Engineers**.
 
-All data comes from [coinmarketcap.com](https://coinmarketcap.com/) APIs.
+All data comes from [https://api.coinmarketcap.com/v1/ticker/](https://api.coinmarketcap.com/v1/ticker/)
 
 ## Upcoming 1.0.0
 We are working hard to add more useful features on coinmon!
